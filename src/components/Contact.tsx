@@ -10,7 +10,7 @@ export default function Contact() {
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
         viewport={{ once: false, amount: 0.2 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="container mx-auto px-6 lg:px-12 max-w-7xl"
+        className="container mx-auto px-4 lg:px-8 max-w-7xl"
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Left Side - Contact Info */}

@@ -10,7 +10,7 @@ export default function About() {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="container mx-auto px-6 lg:px-12 max-w-7xl"
+        className="container mx-auto px-4 lg:px-8 max-w-7xl"
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Image Side */}

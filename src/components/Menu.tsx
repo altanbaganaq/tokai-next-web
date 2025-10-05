@@ -110,7 +110,7 @@ export default function Menu() {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: false, amount: 0.2 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="container mx-auto px-6 lg:px-12 max-w-7xl"
+        className="container mx-auto px-4 lg:px-8 max-w-7xl"
       >
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -133,9 +133,9 @@ export default function Menu() {
             <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-8 py-3 text-sm font-medium tracking-wider uppercase transition-all duration-300 ${
+              className={`px-8 py-3 text-sm font-medium tracking-wider uppercase transition-all duration-300 ease-in-out cursor-pointer ${
                 activeCategory === category.id
-                  ? "bg-[--color-accent] text-white"
+                  ? "border-2 border-gray-700 text-gray-700"
                   : "bg-white text-gray-700 hover:bg-gray-100"
               }`}
             >
@@ -157,7 +157,7 @@ export default function Menu() {
                 delay: index * 0.1,
                 ease: "easeOut" 
               }}
-              className="bg-white overflow-hidden hover:shadow-xl transition-all duration-300 group border border-[--color-border]"
+              className="bg-white overflow-hidden hover:shadow-xl transition-all duration-300 group border-[1px] border-gray-300"
             >
               <div className="relative h-56 overflow-hidden">
                 <div
@@ -191,7 +191,7 @@ export default function Menu() {
             href="https://onlinedelivery.tokaisushi.se"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-[--color-accent] hover:bg-[--color-accent-dark] text-white px-12 py-4 text-sm font-medium tracking-wider uppercase transition-all duration-300"
+            className="inline-block text-gray-700 border-2 border-gray-900 hover:bg-gray-900 hover:text-white px-12 py-4 text-sm font-medium tracking-wider uppercase transition-all duration-300"
           >
             View Full Menu & Order Online
           </a>

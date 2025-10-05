@@ -31,7 +31,7 @@ export default function Header() {
           : "bg-transparent"
       }`}
     >
-      <nav className="container mx-auto px-6 lg:px-12">
+      <nav className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20 lg:h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
@@ -93,7 +93,9 @@ export default function Header() {
               href="https://onlinedelivery.tokaisushi.se"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[--color-accent] hover:bg-[--color-accent-dark] text-white px-8 py-3 text-sm font-medium tracking-wider uppercase transition-all duration-300 shadow-md"
+              className={`px-8 py-3 text-sm font-medium tracking-wider uppercase transition-all duration-300 border-2 ${
+                isScrolled ? "text-gray-900 border-gray-900 hover:bg-gray-900 hover:text-white" : "text-white border-white hover:bg-white hover:text-black"
+              }`}
             >
               Order Online
             </a>

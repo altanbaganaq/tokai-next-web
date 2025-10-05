@@ -35,7 +35,7 @@ export default function Locations() {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: false, amount: 0.2 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
-        className="container mx-auto px-6 lg:px-12 max-w-7xl"
+        className="container mx-auto px-4 lg:px-8 max-w-7xl"
       >
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -64,7 +64,7 @@ export default function Locations() {
                 delay: index * 0.15,
                 ease: "easeOut" 
               }}
-              className="bg-white overflow-hidden hover:shadow-2xl transition-all duration-300 border border-[--color-border]"
+              className="bg-white overflow-hidden transition-all duration-300 border border-gray-300"
             >
               {/* Location Image */}
               <div className="relative h-72 overflow-hidden">
@@ -157,7 +157,7 @@ export default function Locations() {
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-10 block w-full bg-[--color-accent] hover:bg-[--color-accent-dark] text-white text-center px-8 py-4 text-sm font-medium tracking-wider uppercase transition-all duration-300"
+                  className="mt-10 block w-full text-gray-900 border-2 border-gray-900 hover:bg-gray-900 hover:text-white text-center px-8 py-4 text-sm font-medium tracking-wider uppercase transition-all duration-300"
                 >
                   View on Google Maps
                 </a>
