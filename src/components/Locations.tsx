@@ -127,7 +127,7 @@ export default function Locations() {
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-5 md:mt-6 block w-full text-gray-900 border-2 border-gray-900 hover:bg-gray-900 hover:text-white text-center px-5 md:px-6 py-2.5 md:py-3 text-xs font-medium tracking-wider uppercase transition-all duration-300"
+                  className="mt-5 md:mt-6 block w-full text-gray-900 border-1 border-gray-900 hover:bg-gray-900 hover:text-white text-center px-5 md:px-6 py-2.5 md:py-3 text-xs font-medium tracking-wider uppercase transition-all duration-300"
                 >
                   {t.locations.viewMap}
                 </a>

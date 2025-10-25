@@ -90,7 +90,7 @@ export default function Hero() {
               const element = document.getElementById("menu");
               if (element) element.scrollIntoView({ behavior: "smooth" });
             }}
-            className="border-2 border-white hover:bg-white hover:text-black text-white px-6 md:px-10 py-3 md:py-4 font-medium text-xs md:text-sm tracking-wider uppercase transition-all duration-300 w-full sm:w-auto"
+            className="border-1 border-white hover:bg-white hover:text-black text-white px-6 md:px-10 py-3 md:py-4 font-medium text-xs md:text-sm tracking-wider uppercase transition-all duration-300 w-full sm:w-auto"
           >
             {t.hero.menu}
           </button>

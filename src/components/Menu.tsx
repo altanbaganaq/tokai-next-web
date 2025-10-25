@@ -114,7 +114,7 @@ export default function Menu() {
               onClick={() => setActiveCategory(category.id)}
               className={`px-4 md:px-6 py-2 md:py-3 text-xs md:text-sm font-medium tracking-wider uppercase transition-all duration-300 ease-in-out cursor-pointer ${
                 activeCategory === category.id
-                  ? "border-2 border-gray-700 text-gray-700"
+                  ? "border-1 border-gray-700 text-gray-700"
                   : "bg-white text-gray-700 hover:bg-gray-100"
               }`}
             >
@@ -168,7 +168,7 @@ export default function Menu() {
         <div className="text-center mt-8 md:mt-12">
           <button
             onClick={() => setIsOrderModalOpen(true)}
-            className="inline-block text-gray-700 border-2 border-gray-900 hover:bg-gray-900 hover:text-white px-6 md:px-10 py-3 md:py-4 text-xs md:text-sm font-medium tracking-wider uppercase transition-all duration-300 cursor-pointer"
+            className="inline-block text-gray-700 border-1 border-gray-900 hover:bg-gray-900 hover:text-white px-6 md:px-10 py-3 md:py-4 text-xs md:text-sm font-medium tracking-wider uppercase transition-all duration-300 cursor-pointer"
           >
             {t.menu.button}
           </button>

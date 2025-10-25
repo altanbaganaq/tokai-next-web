@@ -97,7 +97,7 @@ export default function Header() {
             <div className="flex items-center space-x-3">
             <button
               onClick={() => setIsOrderModalOpen(true)}
-              className={`px-8 py-3 text-sm font-medium tracking-wider uppercase transition-all duration-300 border-2 ${
+              className={`px-8 py-3 text-sm font-medium tracking-wider uppercase transition-all duration-300 border-1 ${
                 isScrolled ? "text-gray-900 border-gray-900 hover:bg-gray-900 hover:text-white" : "text-white border-white hover:bg-white hover:text-black"
               }`}
             >
@@ -105,7 +105,7 @@ export default function Header() {
             </button>
             
             {/* Language Switcher */}
-            <div className={`flex items-center border-2 ${isScrolled ? "border-gray-900" : "border-white"} border-opacity-50 overflow-hidden`}>
+            <div className={`flex items-center border-1 ${isScrolled ? "border-gray-900" : "border-white"} border-opacity-50 overflow-hidden`}>
               <button
                 onClick={() => setLanguage("se")}
                 className={`px-4 py-3 text-sm font-medium tracking-wider uppercase transition-all duration-300 ${
@@ -206,7 +206,7 @@ export default function Header() {
                 <div className="flex items-center justify-center space-x-2 px-4 pt-2">
                   <button
                     onClick={() => setLanguage("se")}
-                    className={`flex-1 px-4 py-2 text-sm font-medium tracking-wider uppercase transition-all duration-300 border-2 ${
+                    className={`flex-1 px-4 py-2 text-sm font-medium tracking-wider uppercase transition-all duration-300 border-1 ${
                       language === "se"
                         ? "bg-gray-900 text-white border-gray-900"
                         : "text-gray-900 border-gray-300 hover:bg-gray-100"
@@ -216,7 +216,7 @@ export default function Header() {
                   </button>
                   <button
                     onClick={() => setLanguage("en")}
-                    className={`flex-1 px-4 py-2 text-sm font-medium tracking-wider uppercase transition-all duration-300 border-2 ${
+                    className={`flex-1 px-4 py-2 text-sm font-medium tracking-wider uppercase transition-all duration-300 border-1 ${
                       language === "en"
                         ? "bg-gray-900 text-white border-gray-900"
                         : "text-gray-900 border-gray-300 hover:bg-gray-100"
