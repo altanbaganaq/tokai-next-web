@@ -1,66 +1,67 @@
 "use client";
 
+import { useLanguage } from "@/config/i18n";
+
 export default function Footer() {
+  const { t } = useLanguage();
   return (
-    <footer className="bg-black text-white border-t border-white/10">
+    <footer id="footer" className="bg-black text-white border-t border-white/10">
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
-            <div className="text-2xl font-bold mb-4">
+            <div className="text-2xl font-bold mb-4" style={{ fontFamily: 'var(--font-logo)' }}>
               <span className="text-[--color-accent]">TOKAI</span>
               <span className="ml-2">SUSHI</span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Experience the finest Japanese cuisine with authentic flavors and premium ingredients.
+              {t.footer.description}
             </p>
+          </div>
+
+        {/* Enköping Location */}
+        <div>
+            <h3 className="text-sm font-bold mb-4 uppercase tracking-wider">Enköping</h3>
+            <div className="space-y-2 text-gray-400 text-sm leading-relaxed">
+              <p>Ågatan 19, 749 35 Enköping</p>
+              <a
+                href="tel:+46171447188"
+                className="block hover:text-white transition-colors"
+              >
+                +46 1-712 44 44
+              </a>
+              <a
+                href="mailto:enkoping@tokaisushi.se"
+                className="block hover:text-white transition-colors"
+              >
+                tokaisushirestaurant@gmail.com
+              </a>
+            </div>
           </div>
 
           {/* Telefonplan Location */}
           <div>
             <h3 className="text-sm font-bold mb-4 uppercase tracking-wider">Telefonplan</h3>
             <div className="space-y-2 text-gray-400 text-sm leading-relaxed">
-              <p>Telefonvägen 30</p>
-              <p>126 37 Hägersten</p>
+              <p>Tellusgången 27, 126 26 Hägersten</p>
               <a
                 href="tel:+46874488668"
                 className="block hover:text-white transition-colors"
               >
-                +46 8-744 88 68
+                +46 8-754 44 522
               </a>
               <a
                 href="mailto:telefonplan@tokaisushi.se"
                 className="block hover:text-white transition-colors"
               >
-                telefonplan@tokaisushi.se
-              </a>
-            </div>
-          </div>
-
-          {/* Enköping Location */}
-          <div>
-            <h3 className="text-sm font-bold mb-4 uppercase tracking-wider">Enköping</h3>
-            <div className="space-y-2 text-gray-400 text-sm leading-relaxed">
-              <p>Kungsgatan 35</p>
-              <p>745 31 Enköping</p>
-              <a
-                href="tel:+46171447188"
-                className="block hover:text-white transition-colors"
-              >
-                +46 171-44 71 88
-              </a>
-              <a
-                href="mailto:enkoping@tokaisushi.se"
-                className="block hover:text-white transition-colors"
-              >
-                enkoping@tokaisushi.se
+                tokaisushirestaurant@gmail.com
               </a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-sm font-bold mb-4 uppercase tracking-wider">Quick Links</h3>
+            <h3 className="text-sm font-bold mb-4 uppercase tracking-wider">{t.footer.quickLinks}</h3>
             <div className="space-y-2">
               <button
                 onClick={() => {
@@ -69,7 +70,7 @@ export default function Footer() {
                 }}
                 className="block text-gray-400 hover:text-white transition-colors text-sm"
               >
-                Menu
+                {t.footer.menu}
               </button>
               <button
                 onClick={() => {
@@ -78,7 +79,7 @@ export default function Footer() {
                 }}
                 className="block text-gray-400 hover:text-white transition-colors text-sm"
               >
-                Locations
+                {t.footer.locations}
               </button>
               <button
                 onClick={() => {
@@ -87,7 +88,7 @@ export default function Footer() {
                 }}
                 className="block text-gray-400 hover:text-white transition-colors text-sm"
               >
-                Contact
+                {t.footer.contact}
               </button>
               <a
                 href="https://onlinedelivery.tokaisushi.se"
@@ -95,14 +96,14 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="block text-gray-400 hover:text-white transition-colors text-sm"
               >
-                Order Online
+                {t.footer.orderOnline}
               </a>
             </div>
 
             {/* Social Media */}
             <div className="flex space-x-2 mt-6">
               <a
-                href="https://www.facebook.com/tokaisushi"
+                href="https://www.facebook.com/tokaisushirestaurant"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white/5 hover:bg-[--color-accent] p-2.5 transition-all duration-300"
@@ -113,7 +114,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://www.instagram.com/tokaisushi"
+                href="https://www.instagram.com/tokaisushirestaurant/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white/5 hover:bg-[--color-accent] p-2.5 transition-all duration-300"
@@ -130,7 +131,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 mt-12 pt-8 text-center text-gray-500 text-xs">
           <p>
-            © {new Date().getFullYear()} Tokai Sushi. All rights reserved.
+            © {new Date().getFullYear()} {t.footer.copyright}
           </p>
         </div>
       </div>

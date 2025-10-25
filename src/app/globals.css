@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Go3v2';
+  src: url('/fonts/go3v2.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #0a0a0a;
@@ -18,8 +26,9 @@
   --color-dark-bg: var(--dark-bg);
   --color-light-gray: var(--light-gray);
   --color-border: var(--border);
-  --font-heading: var(--font-playfair);
+  --font-heading: var(--font-inter);
   --font-body: var(--font-inter);
+  --font-logo: 'Go3v2', sans-serif;
 }
 
 * {
@@ -35,24 +44,24 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-playfair), serif;
+  font-family: var(--font-inter), sans-serif;
   font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.2;
 }
 
 .section-padding {
-  padding: 2rem 0rem;
+  padding: 3rem 0rem;
 }
 
 @media (min-width: 768px) {
   .section-padding {
-    padding: 7rem 2rem;
+    padding: 5rem 0rem;
   }
 }
 
 @media (min-width: 1024px) {
   .section-padding {
-    padding: 9rem 3rem;
+    padding: 6rem 0rem;
   }
 }

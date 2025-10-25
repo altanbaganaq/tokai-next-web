@@ -1,8 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useLanguage } from "@/config/i18n";
 
 export default function Contact() {
+  const { t } = useLanguage();
   return (
     <section id="contact" className="section-padding bg-[--color-dark-bg] text-white overflow-hidden">
       <motion.div 
@@ -12,28 +14,27 @@ export default function Contact() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="container mx-auto px-4 lg:px-8 max-w-7xl"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
           {/* Left Side - Contact Info */}
           <div>
-            <span className="text-white/60 text-xs font-medium tracking-[0.3em] uppercase">
-              Get in Touch
+            <span className="text-white/60 text-[10px] md:text-xs font-medium tracking-[0.3em] uppercase">
+              {t.contact.tag}
             </span>
-            <h2 className="text-5xl lg:text-6xl font-bold mt-6 mb-8">
-              Contact Us
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-3 md:mt-4 mb-4 md:mb-6">
+              {t.contact.title}
             </h2>
-            <div className="w-16 h-0.5 bg-[--color-accent] mb-8"></div>
-            <p className="text-gray-400 text-base mb-12 leading-relaxed">
-              Have questions or want to make a reservation? We&apos;d love to hear from you. 
-              Reach out to us at either of our locations.
+            <div className="w-12 md:w-16 h-0.5 bg-[--color-accent] mb-4 md:mb-6"></div>
+            <p className="text-gray-400 text-sm md:text-base mb-8 md:mb-10 leading-relaxed">
+              {t.contact.description}
             </p>
 
-            <div className="space-y-10">
+            <div className="space-y-6 md:space-y-8">
               {/* Telefonplan Contact */}
-              <div className="border-b border-white/10 pb-8">
-                <h3 className="text-2xl font-bold mb-4 text-white">
+              <div className="border-b border-white/10 pb-6 md:pb-8">
+                <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-white">
                   Telefonplan, Stockholm
                 </h3>
-                <div className="space-y-3 text-gray-400 text-sm">
+                <div className="space-y-2 md:space-y-3 text-gray-400 text-xs md:text-sm">
                   <div className="flex items-center">
                     <svg
                       className="w-4 h-4 text-[--color-accent] mr-3 flex-shrink-0"
@@ -76,9 +77,9 @@ export default function Contact() {
               </div>
 
               {/* Enköping Contact */}
-              <div className="border-b border-white/10 pb-8">
-                <h3 className="text-2xl font-bold mb-4 text-white">Enköping</h3>
-                <div className="space-y-3 text-gray-400 text-sm">
+              <div className="border-b border-white/10 pb-6 md:pb-8">
+                <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-white">Enköping</h3>
+                <div className="space-y-2 md:space-y-3 text-gray-400 text-xs md:text-sm">
                   <div className="flex items-center">
                     <svg
                       className="w-4 h-4 text-[--color-accent] mr-3 flex-shrink-0"
@@ -122,7 +123,7 @@ export default function Contact() {
 
               {/* Social Media */}
               <div>
-                <h3 className="text-sm font-bold mb-4 text-white uppercase tracking-wider">Follow Us</h3>
+                <h3 className="text-xs md:text-sm font-bold mb-3 md:mb-4 text-white uppercase tracking-wider">{t.contact.followUs}</h3>
                 <div className="flex space-x-3">
                   <a
                     href="https://www.facebook.com/tokaisushi"
@@ -160,7 +161,7 @@ export default function Contact() {
           </div>
 
           {/* Right Side - Image */}
-          <div className="relative h-[500px] lg:h-[700px] overflow-hidden">
+          <div className="relative h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden">
             <div
               className="absolute inset-0 bg-cover bg-center"
               style={{
@@ -168,15 +169,15 @@ export default function Contact() {
               }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-            <div className="absolute bottom-12 left-12 right-12">
-              <h3 className="text-4xl font-bold mb-6">Ready to Order?</h3>
+            <div className="absolute bottom-6 left-6 right-6 md:bottom-10 md:left-10 md:right-10">
+              <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">{t.contact.readyToOrder}</h3>
               <a
                 href="https://onlinedelivery.tokaisushi.se"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-[--color-accent] hover:bg-[--color-accent-dark] text-white px-10 py-4 text-sm font-medium tracking-wider uppercase transition-all duration-300"
+                className="inline-block bg-[--color-accent] hover:bg-[--color-accent-dark] text-white px-6 md:px-10 py-3 md:py-4 text-xs md:text-sm font-medium tracking-wider uppercase transition-all duration-300"
               >
-                Order Online Now
+                {t.contact.orderNow}
               </a>
             </div>
           </div>

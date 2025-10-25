@@ -1,0 +1,166 @@
+{
+  "header": {
+    "about": "About",
+    "menu": "Menu",
+    "locations": "Locations",
+    "contact": "Contact",
+    "delivery": "Home Delivery"
+  },
+  "hero": {
+    "subtitle": "Japanese sushi restaurant",
+    "menu": "Menu",
+    "delivery": "Home Delivery",
+    "scrollDown": "Scroll down"
+  },
+  "about": {
+    "tag": "About Us",
+    "title": "Love for",
+    "titleAccent": "Sushi",
+    "description1": "Sushi making is not just an art form, it's live theater. In a display of ancient techniques, our chefs prepare each dish in front of you with precision and passion.",
+    "description2": "Our experienced sushi chefs select everything, so only the very best ends up on your plate. An intimate sushi experience, blending modern and ancient techniques, where every detail is considered, Tokai Sushi is the place for voyeuristic chef watching. Welcome to Tokai Sushi",
+    "stats": {
+      "years": "Years of Exquisite Quality",
+      "locations": "Locations",
+      "menuItems": "Menu Items"
+    }
+  },
+  "menu": {
+    "tag": "Our Menu",
+    "title": "Exquisite Flavors",
+    "description": "Discover our carefully curated menu featuring traditional Japanese dishes and innovative creations",
+    "categories": {
+      "popular": "Popular",
+      "sushi": "Sushi",
+      "burrito": "Burrito",
+      "special": "Special Rolls"
+    },
+    "items": {
+      "popular": [
+        {
+          "name": "Salmon Avocado",
+          "description": "Choose quantity at next step",
+          "price": "135 kr"
+        },
+        {
+          "name": "Salmon Nigiri",
+          "description": "Choose quantity at next step",
+          "price": "135 kr"
+        },
+        {
+          "name": "15 pieces",
+          "description": "4 salmon, 1 tuna, 1 shrimp, 1 crabstick, 1 tai fish, 1 squid, 1 eel and 5 rolls",
+          "price": "185 kr"
+        },
+        {
+          "name": "Your choice - 15 pieces",
+          "description": "Choose nigiri pieces at next step",
+          "price": "200 kr"
+        }
+      ],
+      "sushi": [
+        {
+          "name": "9 pieces",
+          "description": "2 salmon, 1 tuna, 1 shrimp, 1 crabstick, 1 tai fish and 3 rolls",
+          "price": "125 kr"
+        },
+        {
+          "name": "11 pieces",
+          "description": "3 salmon, 1 tuna, 1 shrimp, 1 crabstick, 1 tai fish and 4 rolls",
+          "price": "145 kr"
+        },
+        {
+          "name": "13 pieces",
+          "description": "4 salmon, 1 tuna, 1 shrimp, 1 crabstick, 1 tai fish, 1 squid and 4 rolls",
+          "price": "165 kr"
+        },
+        {
+          "name": "15 pieces",
+          "description": "4 salmon, 1 tuna, 1 shrimp, 1 crabstick, 1 tai fish, 1 squid, 1 eel and 5 rolls",
+          "price": "185 kr"
+        }
+      ],
+      "burrito": [
+        {
+          "name": "Salmon Burrito",
+          "description": "Salmon pieces, cucumber and avocado. Add mayonnaise and teriyaki sauce",
+          "price": "175 kr"
+        },
+        {
+          "name": "Tempura Shrimp Burrito",
+          "description": "Tempura shrimp, cucumber and avocado. Add mayonnaise and teriyaki sauce",
+          "price": "175 kr"
+        },
+        {
+          "name": "Yakiniku Beef Burrito",
+          "description": "Yakiniku beef, cucumber and avocado. Add mayonnaise and herbs",
+          "price": "175 kr"
+        },
+        {
+          "name": "Crab Burrito",
+          "description": "Crabstick, cucumber, avocado, scallions and spicy mayo",
+          "price": "175 kr"
+        }
+      ],
+      "special": [
+        {
+          "name": "Yakiniku Rolls",
+          "description": "Beef, cucumber, avocado, scallions and spicy mayo",
+          "price": "175 kr"
+        },
+        {
+          "name": "Grilled Salmon Rolls",
+          "description": "Marinated crabstick, cucumber, avocado, scallions and spicy mayo",
+          "price": "175 kr"
+        },
+        {
+          "name": "Special Tempura Rolls",
+          "description": "Salmon, fried shrimp, cucumber, scallions, avocado and spicy mayo",
+          "price": "175 kr"
+        },
+        {
+          "name": "Fried Rolls",
+          "description": "Salmon, crabstick, cucumber, avocado and spicy mayo",
+          "price": "175 kr"
+        }
+      ]
+    },
+    "button": "View Full Menu & Order Online"
+  },
+  "locations": {
+    "tag": "Visit Us",
+    "title": "Our Locations",
+    "description": "Find us at either of our two convenient locations in Stockholm and Enköping",
+    "address": "Address",
+    "phone": "Phone",
+    "openingHours": "Opening Hours",
+    "days": {
+      "monFri": "Mon-Fri",
+      "satSun": "Sat-Sun"
+    },
+    "viewMap": "View on Google Maps"
+  },
+  "contact": {
+    "tag": "Get in Touch",
+    "title": "Contact Us",
+    "description": "Have questions or want to make a reservation? We'd love to hear from you. Reach out to us at either of our locations.",
+    "followUs": "Follow Us",
+    "readyToOrder": "Ready to Order?",
+    "orderNow": "Order Online Now"
+  },
+  "footer": {
+    "description": "Experience the finest Japanese cuisine with authentic flavors and premium ingredients.",
+    "quickLinks": "Quick Links",
+    "menu": "Menu",
+    "locations": "Locations",
+    "contact": "Contact",
+    "orderOnline": "Order Online",
+    "copyright": "Tokai Sushi. All rights reserved."
+  },
+  "orderModal": {
+    "close": "Close",
+    "title": "Choose Your Restaurant",
+    "description": "Select which of our restaurants you would like to order from",
+    "orderNow": "Order Now"
+  }
+}
+

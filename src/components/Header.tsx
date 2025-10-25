@@ -2,10 +2,14 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import OrderModal from "./OrderModal";
+import { useLanguage } from "@/config/i18n";
 
 export default function Header() {
+  const { language, setLanguage, t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isOrderModalOpen, setIsOrderModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,7 +39,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-20 lg:h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
-            <div className="text-xl lg:text-2xl font-bold tracking-tight">
+            <div className="text-xl lg:text-2xl font-bold" style={{ fontFamily: 'var(--font-logo)' }}>
               <span
                 className={`transition-colors ${
                   isScrolled
@@ -59,46 +63,79 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-10">
             <button
               onClick={() => scrollToSection("about")}
-              className={`text-sm font-medium tracking-wide uppercase transition-colors hover:text-[--color-accent] ${
+              className={`text-sm font-medium tracking-wide uppercase transition-colors hover:text-[--color-accent] cursor-pointer ${
                 isScrolled ? "text-gray-900" : "text-white"
               }`}
             >
-              About
+              {t.header.about}
             </button>
             <button
               onClick={() => scrollToSection("menu")}
-              className={`text-sm font-medium tracking-wide uppercase transition-colors hover:text-[--color-accent] ${
+              className={`text-sm font-medium tracking-wide uppercase transition-colors hover:text-[--color-accent] cursor-pointer ${
                 isScrolled ? "text-gray-900" : "text-white"
               }`}
             >
-              Menu
+              {t.header.menu}
             </button>
             <button
               onClick={() => scrollToSection("locations")}
-              className={`text-sm font-medium tracking-wide uppercase transition-colors hover:text-[--color-accent] ${
+              className={`text-sm font-medium tracking-wide uppercase transition-colors hover:text-[--color-accent] cursor-pointer ${
                 isScrolled ? "text-gray-900" : "text-white"
               }`}
             >
-              Locations
+              {t.header.locations}
             </button>
             <button
-              onClick={() => scrollToSection("contact")}
-              className={`text-sm font-medium tracking-wide uppercase transition-colors hover:text-[--color-accent] ${
+              onClick={() => scrollToSection("footer")}
+              className={`text-sm font-medium tracking-wide uppercase transition-colors hover:text-[--color-accent] cursor-pointer ${
                 isScrolled ? "text-gray-900" : "text-white"
               }`}
             >
-              Contact
+              {t.header.contact}
             </button>
-            <a
-              href="https://onlinedelivery.tokaisushi.se"
-              target="_blank"
-              rel="noopener noreferrer"
+
+            <div className="flex items-center space-x-3">
+            <button
+              onClick={() => setIsOrderModalOpen(true)}
               className={`px-8 py-3 text-sm font-medium tracking-wider uppercase transition-all duration-300 border-2 ${
                 isScrolled ? "text-gray-900 border-gray-900 hover:bg-gray-900 hover:text-white" : "text-white border-white hover:bg-white hover:text-black"
               }`}
             >
-              Order Online
-            </a>
+              {t.header.delivery}
+            </button>
+            
+            {/* Language Switcher */}
+            <div className={`flex items-center border-2 ${isScrolled ? "border-gray-900" : "border-white"} border-opacity-50 overflow-hidden`}>
+              <button
+                onClick={() => setLanguage("se")}
+                className={`px-4 py-3 text-sm font-medium tracking-wider uppercase transition-all duration-300 ${
+                  language === "se"
+                    ? isScrolled
+                      ? "bg-gray-900 text-white"
+                      : "bg-white text-black"
+                    : isScrolled
+                    ? "text-gray-900 hover:bg-gray-100"
+                    : "text-white hover:bg-white/10"
+                }`}
+              >
+                SE
+              </button>
+              <button
+                onClick={() => setLanguage("en")}
+                className={`px-4 py-3 text-sm font-medium tracking-wider uppercase transition-all duration-300 ${
+                  language === "en"
+                    ? isScrolled
+                      ? "bg-gray-900 text-white"
+                      : "bg-white text-black"
+                    : isScrolled
+                    ? "text-gray-900 hover:bg-gray-100"
+                    : "text-white hover:bg-white/10"
+                }`}
+              >
+                EN
+              </button>
+            </div>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -135,38 +172,66 @@ export default function Header() {
                 onClick={() => scrollToSection("about")}
                 className="text-gray-800 hover:text-[--color-accent] font-medium transition-colors px-4 py-2 text-left"
               >
-                About
+                {t.header.about}
               </button>
               <button
                 onClick={() => scrollToSection("menu")}
                 className="text-gray-800 hover:text-[--color-accent] font-medium transition-colors px-4 py-2 text-left"
               >
-                Menu
+                {t.header.menu}
               </button>
               <button
                 onClick={() => scrollToSection("locations")}
                 className="text-gray-800 hover:text-[--color-accent] font-medium transition-colors px-4 py-2 text-left"
               >
-                Locations
+                {t.header.locations}
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
                 className="text-gray-800 hover:text-[--color-accent] font-medium transition-colors px-4 py-2 text-left"
-              >
-                Contact
-              </button>
-              <a
-                href="https://onlinedelivery.tokaisushi.se"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[--color-accent] hover:bg-[--color-accent-dark] text-white px-6 py-3 font-medium transition-all duration-300 mx-4 text-center"
-              >
-                Order Online
-              </a>
+                >
+                  {t.header.contact}
+                </button>
+                <button
+                  onClick={() => {
+                    setIsOrderModalOpen(true);
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className="bg-[--color-accent] hover:bg-[--color-accent-dark] text-white px-6 py-3 font-medium transition-all duration-300 mx-4 text-center"
+                >
+                  {t.header.delivery}
+                </button>
+                
+                {/* Mobile Language Switcher */}
+                <div className="flex items-center justify-center space-x-2 px-4 pt-2">
+                  <button
+                    onClick={() => setLanguage("se")}
+                    className={`flex-1 px-4 py-2 text-sm font-medium tracking-wider uppercase transition-all duration-300 border-2 ${
+                      language === "se"
+                        ? "bg-gray-900 text-white border-gray-900"
+                        : "text-gray-900 border-gray-300 hover:bg-gray-100"
+                    }`}
+                  >
+                    SE
+                  </button>
+                  <button
+                    onClick={() => setLanguage("en")}
+                    className={`flex-1 px-4 py-2 text-sm font-medium tracking-wider uppercase transition-all duration-300 border-2 ${
+                      language === "en"
+                        ? "bg-gray-900 text-white border-gray-900"
+                        : "text-gray-900 border-gray-300 hover:bg-gray-100"
+                    }`}
+                  >
+                    EN
+                  </button>
+                </div>
             </div>
           </div>
         )}
       </nav>
+
+      {/* Order Modal */}
+      <OrderModal isOpen={isOrderModalOpen} onClose={() => setIsOrderModalOpen(false)} />
     </header>
   );
 }

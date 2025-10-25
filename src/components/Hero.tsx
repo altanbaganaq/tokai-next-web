@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import OrderModal from "./OrderModal";
+import { useLanguage } from "@/config/i18n";
 
 const heroImages = [
   "/images/hero-1.jpeg",
@@ -9,7 +11,9 @@ const heroImages = [
 ];
 
 export default function Hero() {
+  const { t } = useLanguage();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isOrderModalOpen, setIsOrderModalOpen] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -38,15 +42,15 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-6xl mx-auto py-32">
+      <div className="relative z-10 text-center px-4 max-w-6xl mx-auto py-20 md:py-28 lg:py-32">
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-8"
+          className="mb-4 md:mb-6"
         >
-          <div className="text-white/80 text-xs md:text-sm font-medium tracking-[0.4em] uppercase">
-            Authentic Japanese Cuisine
+          <div className="text-white/80 text-[10px] md:text-xs font-medium tracking-[0.3em] md:tracking-[0.4em] uppercase">
+            {t.hero.subtitle}
           </div>
         </motion.div>
         
@@ -54,28 +58,20 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-6xl md:text-8xl lg:text-9xl font-bold text-white mb-8 leading-none"
+          className="text-4xl md:text-7xl lg:text-8xl font-bold text-white mb-4 md:mb-6 leading-none"
+          style={{ fontFamily: 'var(--font-logo)' }}
         >
-          TOKAI
-          <br />
-          <span className="text-[--color-accent]">SUSHI</span>
+          <span className="tracking-normal">
+            TOKAI SUSHI
+          </span>
         </motion.h1>
         
         <motion.div 
           initial={{ width: 0 }}
-          animate={{ width: 64 }}
+          animate={{ width: 48 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="h-0.5 bg-[--color-accent] mx-auto mb-8"
+          className="h-0.5 bg-[--color-accent] mx-auto mb-4 md:mb-6"
         ></motion.div>
-        
-        <motion.p 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-base md:text-lg lg:text-xl text-white/90 mb-12 max-w-2xl mx-auto font-light tracking-wide"
-        >
-          Where tradition meets excellence. Crafted with passion, served with pride.
-        </motion.p>
 
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -83,22 +79,20 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 1 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
-          <a
-            href="https://onlinedelivery.tokaisushi.se"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-[--color-accent] hover:bg-[--color-accent-dark] text-white px-10 py-4 font-medium text-sm tracking-wider uppercase transition-all duration-300 w-full sm:w-auto"
+          <button
+            onClick={() => setIsOrderModalOpen(true)}
+            className="bg-[--color-accent] hover:bg-[--color-accent-dark] text-white px-6 md:px-10 py-3 md:py-4 font-medium text-xs md:text-sm tracking-wider uppercase transition-all duration-300 w-full sm:w-auto"
           >
-            Order Online
-          </a>
+            {t.hero.delivery}
+          </button>
           <button
             onClick={() => {
               const element = document.getElementById("menu");
               if (element) element.scrollIntoView({ behavior: "smooth" });
             }}
-            className="border-2 border-white hover:bg-white hover:text-black text-white px-10 py-4 font-medium text-sm tracking-wider uppercase transition-all duration-300 w-full sm:w-auto"
+            className="border-2 border-white hover:bg-white hover:text-black text-white px-6 md:px-10 py-3 md:py-4 font-medium text-xs md:text-sm tracking-wider uppercase transition-all duration-300 w-full sm:w-auto"
           >
-            Explore Menu
+            {t.hero.menu}
           </button>
         </motion.div>
 
@@ -110,7 +104,7 @@ export default function Hero() {
           className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce hidden lg:block"
         >
           <div className="flex flex-col items-center">
-            <span className="text-white/60 text-xs uppercase tracking-widest mb-2">Scroll</span>
+            <span className="text-white/60 text-xs uppercase tracking-widest mb-2">{t.hero.scrollDown}</span>
             <svg
               className="w-5 h-5 text-white/60"
               fill="none"
@@ -125,6 +119,9 @@ export default function Hero() {
           </div>
         </motion.div>
       </div>
+
+      {/* Order Modal */}
+      <OrderModal isOpen={isOrderModalOpen} onClose={() => setIsOrderModalOpen(false)} />
     </section>
   );
 }

@@ -1,0 +1,166 @@
+{
+  "header": {
+    "about": "Om oss",
+    "menu": "Meny",
+    "locations": "Platser",
+    "contact": "Kontakt",
+    "delivery": "Hemkörning"
+  },
+  "hero": {
+    "subtitle": "Japansk sushi restaurang",
+    "menu": "Meny",
+    "delivery": "Hemkörning",
+    "scrollDown": "Scrolla ner"
+  },
+  "about": {
+    "tag": "Om oss",
+    "title": "Kärlek till",
+    "titleAccent": "Sushi",
+    "description1": "Sushitillverkning är inte bara en konstform, det är en omedelbar teater. I en uppvisning av gamla tekniker förbereder våra kockar varje maträtt framför dig med precision och känslor.",
+    "description2": "Våra erfarna sushikockar väljer allt, så bara de allra bästa slutar upp på din tallrik. En intim sushiupplevelse, som blandar modern och gammal teknik, där varje detalj övervägs, Tokai Sushi är platsen för voyeuristisk kockövervakning. Välkommen till Tokai Sushi",
+    "stats": {
+      "years": "År av utsökt kvalitet",
+      "locations": "Platser",
+      "menuItems": "Menyobjekt"
+    }
+  },
+  "menu": {
+    "tag": "Vår Meny",
+    "title": "Utsökta Smaker",
+    "description": "Upptäck vår noggrant utvalda meny med traditionella japanska rätter och innovativa kreationer",
+    "categories": {
+      "popular": "Populärt",
+      "sushi": "Sushi",
+      "burrito": "Burrito",
+      "special": "Specialrullar"
+    },
+    "items": {
+      "popular": [
+        {
+          "name": "Lax Avokado",
+          "description": "Välj antal vid nästa steg",
+          "price": "135 kr"
+        },
+        {
+          "name": "Lax Nigiri",
+          "description": "Välj antal vid nästa steg",
+          "price": "135 kr"
+        },
+        {
+          "name": "15 bitar",
+          "description": "4 lax, 1 tonfisk, 1 räka, 1 crabstick, 1 taifle, 1 bläckfisk, 1 ålfisk och 5 rullar",
+          "price": "185 kr"
+        },
+        {
+          "name": "Eget val - 15 bitar",
+          "description": "Välj nigiribitar vid nästa steg",
+          "price": "200 kr"
+        }
+      ],
+      "sushi": [
+        {
+          "name": "9 bitar",
+          "description": "2 lax, 1 tonfisk, 1 räka, 1 crabstick,1 taifle och 3 rullar",
+          "price": "125 kr"
+        },
+        {
+          "name": "11 bitar",
+          "description": "3 lax, 1 tonfisk, 1 räka, 1 crabstick, 1 taifle och 4 rullar",
+          "price": "145 kr"
+        },
+        {
+          "name": "13 bitar",
+          "description": "4 lax, 1 tonfisk, 1 räka, 1 crabstick, 1 taifle, 1 bläckfisk och 4 rullar",
+          "price": "165 kr"
+        },
+        {
+          "name": "15 bitar",
+          "description": "4 lax, 1 tonfisk, 1 räka, 1 crabstick, 1 taifle, 1 bläckfisk, 1 ålfisk och 5 rullar",
+          "price": "185 kr"
+        }
+      ],
+      "burrito": [
+        {
+          "name": "Burrito Lax",
+          "description": "laxbitarna , gurka och avokado. Tillsätt majonnäs och teriyaki sås",
+          "price": "175 kr"
+        },
+        {
+          "name": "Burrito Tempura räkor",
+          "description": "Tempura räkor, gurka och avokado. Tillsätt majonnäs och teriyaki sås",
+          "price": "175 kr"
+        },
+        {
+          "name": "Burrito Yakiniku kött",
+          "description": "Yakiniku kött gurka och avokado. Tillsätt majonnäs och örter",
+          "price": "175 kr"
+        },
+        {
+          "name": "Burrito Crabb",
+          "description": "Crabstick, gurka, avokado, gräslök och chilimajo",
+          "price": "175 kr"
+        }
+      ],
+      "special": [
+        {
+          "name": "Yakinikurullar",
+          "description": "Nötkött, gurka. avokado, gräslök och chilimajo",
+          "price": "175 kr"
+        },
+        {
+          "name": "Halstrade laxrullar",
+          "description": "Marinerad crabstick, gurka, avokado. gräslök och chilimajo",
+          "price": "175 kr"
+        },
+        {
+          "name": "Special tempurarullar",
+          "description": "Lax, friterade räkor, gurka, gräslök, avokado och chilimajo",
+          "price": "175 kr"
+        },
+        {
+          "name": "Friterade rullar",
+          "description": "Lax, crabstick, gurka, avokado och chilimajo",
+          "price": "175 kr"
+        }
+      ]
+    },
+    "button": "Se fullständig meny & beställ online"
+  },
+  "locations": {
+    "tag": "Besök Oss",
+    "title": "Våra Platser",
+    "description": "Hitta oss på en av våra två bekväma platser i Stockholm och Enköping",
+    "address": "Adress",
+    "phone": "Telefon",
+    "openingHours": "Öppettider",
+    "days": {
+      "monFri": "Mån-Fre",
+      "satSun": "Lör-Sön"
+    },
+    "viewMap": "Visa på Google Maps"
+  },
+  "contact": {
+    "tag": "Hör Av Dig",
+    "title": "Kontakta Oss",
+    "description": "Har du frågor eller vill boka ett bord? Vi skulle gärna höra från dig. Kontakta oss på någon av våra platser.",
+    "followUs": "Följ Oss",
+    "readyToOrder": "Redo att Beställa?",
+    "orderNow": "Beställ Online Nu"
+  },
+  "footer": {
+    "description": "Upplev det finaste japanska köket med autentiska smaker och förstklassiga ingredienser.",
+    "quickLinks": "Snabblänkar",
+    "menu": "Meny",
+    "locations": "Platser",
+    "contact": "Kontakt",
+    "orderOnline": "Beställ Online",
+    "copyright": "Tokai Sushi. Alla rättigheter förbehållna."
+  },
+  "orderModal": {
+    "close": "Stäng",
+    "title": "Välj din restaurang",
+    "description": "Välj vilket av våra restauranger du vill beställa från",
+    "orderNow": "Beställ nu"
+  }
+}
+
