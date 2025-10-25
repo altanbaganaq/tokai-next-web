@@ -37,7 +37,7 @@ export default function OrderModal({ isOpen, onClose }: OrderModalProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="absolute inset-0 bg-black/70 backdrop-blur-sm"
+            className="absolute inset-0 bg-[#1F1F1F]/70 backdrop-blur-sm"
           />
 
           {/* Modal */}
@@ -98,7 +98,7 @@ export default function OrderModal({ isOpen, onClose }: OrderModalProps) {
                         className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500"
                         style={{ backgroundImage: `url('${location.image}')` }}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#1F1F1F]/60 to-transparent" />
                       <div className="absolute bottom-4 left-4">
                         <h3 className="text-2xl font-bold text-white mb-1">
                           {location.name}

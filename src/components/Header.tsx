@@ -51,7 +51,7 @@ export default function Header() {
               </span>
               <span
                 className={`ml-2 transition-colors ${
-                  isScrolled ? "text-black" : "text-white"
+                  isScrolled ? "text-[#1F1F1F]" : "text-white"
                 }`}
               >
                 SUSHI
@@ -98,7 +98,7 @@ export default function Header() {
             <button
               onClick={() => setIsOrderModalOpen(true)}
               className={`px-8 py-3 text-sm font-medium tracking-wider uppercase transition-all duration-300 border-1 ${
-                isScrolled ? "text-gray-900 border-gray-900 hover:bg-gray-900 hover:text-white" : "text-white border-white hover:bg-white hover:text-black"
+                isScrolled ? "text-gray-900 border-gray-900 hover:bg-gray-900 hover:text-white" : "text-white border-white hover:bg-white hover:text-[#1F1F1F]"
               }`}
             >
               {t.header.delivery}
@@ -112,7 +112,7 @@ export default function Header() {
                   language === "se"
                     ? isScrolled
                       ? "bg-gray-900 text-white"
-                      : "bg-white text-black"
+                      : "bg-white text-[#1F1F1F]"
                     : isScrolled
                     ? "text-gray-900 hover:bg-gray-100"
                     : "text-white hover:bg-white/10"
@@ -126,7 +126,7 @@ export default function Header() {
                   language === "en"
                     ? isScrolled
                       ? "bg-gray-900 text-white"
-                      : "bg-white text-black"
+                      : "bg-white text-[#1F1F1F]"
                     : isScrolled
                     ? "text-gray-900 hover:bg-gray-100"
                     : "text-white hover:bg-white/10"

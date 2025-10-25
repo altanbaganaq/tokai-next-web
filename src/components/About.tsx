@@ -33,7 +33,7 @@ export default function About() {
               </span>
             </div>
             
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4 md:mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text mb-4 md:mb-6">
               {t.about.title}
               <br />
               <span className="text-[--color-accent]">{t.about.titleAccent}</span>

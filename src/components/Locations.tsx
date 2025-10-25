@@ -46,7 +46,7 @@ export default function Locations() {
           <span className="text-[--color-accent] text-[10px] md:text-xs font-medium tracking-[0.3em] uppercase">
             {t.locations.tag}
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mt-3 md:mt-4 mb-3 md:mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1F1F1F] mt-3 md:mt-4 mb-3 md:mb-4">
             {t.locations.title}
           </h2>
           <div className="w-12 md:w-16 h-0.5 bg-[--color-accent] mx-auto mb-4 md:mb-6"></div>
@@ -76,7 +76,7 @@ export default function Locations() {
                   className="absolute inset-0 bg-cover bg-center hover:scale-110 transition-transform duration-700"
                   style={{ backgroundImage: `url('${location.image}')` }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1F1F1F]/70 to-transparent" />
                 <h3 className="absolute bottom-3 left-4 md:bottom-4 md:left-5 text-xl md:text-2xl font-bold text-white">
                   {location.name}
                 </h3>
@@ -88,7 +88,7 @@ export default function Locations() {
                   {/* Address */}
                   <div className="flex items-start">
                     <div>
-                      <div className="font-bold text-black mb-1 text-xs uppercase tracking-wider">{t.locations.address}</div>
+                      <div className="font-bold text-[#1F1F1F] mb-1 text-xs uppercase tracking-wider">{t.locations.address}</div>
                       <p className="text-gray-600 text-xs md:text-sm">{location.address}</p>
                     </div>
                   </div>
@@ -96,7 +96,7 @@ export default function Locations() {
                   {/* Phone */}
                   <div className="flex items-start">
                     <div>
-                      <div className="font-bold text-black mb-1 text-xs uppercase tracking-wider">{t.locations.phone}</div>
+                      <div className="font-bold text-[#1F1F1F] mb-1 text-xs uppercase tracking-wider">{t.locations.phone}</div>
                       <a
                         href={`tel:${location.phone.replace(/\s/g, "")}`}
                         className="text-[--color-accent] hover:text-[--color-accent-dark] transition-colors text-xs md:text-sm"
@@ -109,7 +109,7 @@ export default function Locations() {
                   {/* Hours */}
                   <div className="flex items-start">
                     <div className="flex-1">
-                      <div className="font-bold text-black mb-2 text-xs uppercase tracking-wider">{t.locations.openingHours}</div>
+                      <div className="font-bold text-[#1F1F1F] mb-2 text-xs uppercase tracking-wider">{t.locations.openingHours}</div>
                       {location.hours.map((hour, idx) => (
                         <div key={idx} className="flex justify-between text-gray-600 mb-1 text-xs md:text-sm">
                           <span className="font-medium">{hour.days}</span>

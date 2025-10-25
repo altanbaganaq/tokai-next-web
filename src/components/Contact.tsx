@@ -168,7 +168,7 @@ export default function Contact() {
                 backgroundImage: `url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=2074&auto=format&fit=crop')`,
               }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1F1F1F]/80 via-[#1F1F1F]/20 to-transparent" />
             <div className="absolute bottom-6 left-6 right-6 md:bottom-10 md:left-10 md:right-10">
               <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">{t.contact.readyToOrder}</h3>
               <a

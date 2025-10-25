@@ -97,7 +97,7 @@ export default function Menu() {
           <span className="text-[--color-accent] text-[10px] md:text-xs font-medium tracking-[0.3em] uppercase">
             {t.menu.tag}
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mt-3 md:mt-4 mb-3 md:mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1F1F1F] mt-3 md:mt-4 mb-3 md:mb-4">
             {t.menu.title}
           </h2>
           <div className="w-12 md:w-16 h-0.5 bg-[--color-accent] mx-auto mb-4 md:mb-6"></div>
@@ -143,7 +143,7 @@ export default function Menu() {
                   className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700"
                   style={{ backgroundImage: `url('${item.image}')` }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1F1F1F]/70 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
                   <div className="flex justify-between items-end">
                     <h3 className="text-xl font-bold text-white">
